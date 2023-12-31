@@ -1,0 +1,120 @@
+.promo{
+  background: #000000;
+  background-image: url("../../img/images/bg3.gif");
+  background-repeat: no-repeat;
+  background-size: 1500px 500px;
+  background-position: 50% 80%;
+  height:746px;
+  padding-top: 36px;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 89px;
+  &__logo > img{
+    height: 89px;
+    width: 190px;
+  }
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    :last-child{
+    margin-right: 0;
+      margin-left: 20px;
+    ::before{
+      content: "";
+      background-image: url("../../img/icons/user.png");
+      width: 28px;
+      height: 28px;
+      background-size: 28px 28px;
+      position: absolute;
+      right: 100%;
+      bottom: 0;
+      display: block;
+      margin-right: 4px;
+      margin-bottom: -2px;
+    }
+  }
+
+    a{
+      font-family: Benzin-Regular, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19px;
+      color: #FFFFFF;
+      text-decoration: none;
+      text-transform: none;
+      margin-left: 0;
+
+    }
+    a:last-child {
+      display: flex;
+      align-items: center;
+      margin-left: 0;
+      img {
+      width: 28px;
+      height: 28px;
+      }
+    }
+    li{
+      margin-right: 41px;
+      position: relative; /* Позиционируем, чтобы дочерний псевдоэлемент относился к этому элементу */
+      padding-bottom: 5px;
+      margin-left: 0;
+        ::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        display: block;
+          background-image: linear-gradient(to right, #FF00CC, #A044FF);
+          background-size: 0 100%
+
+      }
+      :hover::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          display: block;
+          animation: gradientAnimation 0.6s forwards;
+
+
+        }
+
+    }
+    @keyframes gradientAnimation {
+      from{
+        width: 0;
+      }
+      to {
+        background-size: 100% 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+.subheader{
+  margin-top: 90px;
+  h1{
+    display: block;
+    text-align: center;
+    font-family: Benzin-Bold, sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 52px;
+    color: #FFFFFF;
+    span{
+      background-image: linear-gradient(to right, #ff00cc, #a044ff); /* Начальный и конечный цвета градиента для текста */
+      background-clip: text;
+      color: transparent;
+    }
+  }
+}

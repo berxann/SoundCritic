@@ -1,0 +1,31 @@
+//importPart
+@import "stuff/fonts";
+@import "stuff/mixins";
+@import "stuff/reset";
+@import "stuff/variables";
+@import "stuff/fonts";
+
+//importBlocks
+
+@import "blocks/promo";
+//@import "blocks/";
+//@import "blocks/";
+//@import "blocks/";
+//@import "blocks/";
+
+//scssRules
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container{
+  width: $containerWidth;
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+

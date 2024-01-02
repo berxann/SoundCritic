@@ -1,0 +1,49 @@
+.footer{
+  background-color: black;
+
+  &wrapper{
+    height: 150px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &logo{
+    width: 190px;
+    height: 89px;
+  }
+  &content{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &descr{
+    display: inline;
+    font-family: Benzin-Regular;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+  }
+  &element{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    text-decoration: none;
+    a{
+      text-decoration: none;
+    }
+  }
+  &text{
+    font-family: Benzin-Regular, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+  }
+}

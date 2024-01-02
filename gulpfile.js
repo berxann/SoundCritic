@@ -1,5 +1,6 @@
 const gulp = require('gulp')
 const {src, dest, series, watch} = require('gulp')
+const include = require('gulp-file-include')
 const sass = require('gulp-sass')(require('sass'))
 const htmlmin = require('gulp-htmlmin')
 const csso = require('gulp-csso')
@@ -11,6 +12,9 @@ gulp.task('html', function() {
     return src('src/html/**.html','node_modules/bootstrap/dist/js/bootstrap.bundle.js', {allowEmpty: true})
         .pipe((htmlmin)({
             collapseWhitespace: true
+        }))
+        .pipe(include({
+            prefix: '@@'
         }))
         .pipe(dest('dist/html'))
 
@@ -27,7 +31,7 @@ gulp.task('style', function(){
 })
 
 gulp.task('js', () => {
-    return gulp.src('src/js/.js' ,{allowEmpty:true})
+    return gulp.src('src/js/*.js' ,{allowEmpty:true})
         .pipe(gulp.dest('dist/js'));
 });
 

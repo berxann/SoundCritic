@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Вход</title>
+</head>
+<body>
+    <section class="login">
+    <div class="container">
+        @@include("../parts/header.html")
+        <div class="login__wrapper">
+            <div class="login__title">Войдите</div>
+            <form action="#" class="feed-form">
+                <input name="email" required type="email", placeholder="Введите e-mail">
+                <input name="password" required type="password", placeholder="Введите пароль">
+            </form>
+            <img src="../img/images/sigma.gif" alt="sigma" class="login__img">
+            <button class="btn">Войти</button>
+            <div class="login__text">
+                <div class="login__descr">Нет аккаунта?</div>
+                <a href="#" class="login__link">Зарегистрироваться</a>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    @@include("../parts/footer.html")
+    </section>
+    
+</body>
+</html>

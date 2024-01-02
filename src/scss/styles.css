@@ -153,7 +153,8 @@
 }
 .subheader h1 span {
   background-image: linear-gradient(to right, #ff00cc, #a044ff);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
 }
 
@@ -173,7 +174,8 @@
 }
 .best .title span {
   background-image: linear-gradient(to right, #ff00cc, #a044ff);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
 }
 .best__wrapper {
@@ -281,7 +283,8 @@
 }
 .title span {
   background-image: linear-gradient(to right, #ff00cc, #a044ff);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
 }
 
@@ -458,6 +461,4 @@
   margin: 0 auto;
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

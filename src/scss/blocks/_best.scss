@@ -2,6 +2,9 @@
     background-color: #180F1A;
     height: 1256px;
     padding-top: 73px;
+    padding-left: 200px;
+    padding-right: 200px;
+    position: relative;
     .title{
         font-family: Benzin-Semibold, sans-serif;
         font-size: 48px;
@@ -16,24 +19,42 @@
             color: transparent;
         }
     }
-    &-item{
+    &__wrapper{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 1014px;
+
+        margin: 0 auto;
+        margin-top: 84px;
+    }
+    &-item {
+        position: relative;
         box-sizing: border-box;
-        width: 274px;
-        height: 391px;
-        background-color: rgba($color: #404040CC, $alpha: 0.8);
-        border: 2px solid transparent;
         padding-top: 10px;
-        padding-left: 9px;
-        padding-right: 9px;
-        border-image: linear-gradient(to right, #ff00cc, #a044ff) 1 round;
+        padding-left: 13px;
+        padding-right: 11px;
+        width: 278px;
+        height: 395px;
+        margin: 10px 30px;
+        transition: 0.5s all;
+        background-image: url("../../img/images/music_card.png");
         border-radius: 14px;
         
+
+        &:hover{
+            transform: scale(1.05);
+            
+        }
+
+
         &__img{
             width: 256px;
             height: 256px;
             display: block;
             margin: 0 auto;
-            border-radius: 6px;
+            border-radius: 8px;
             margin-left: -2px;
         }
         &__name{
@@ -67,6 +88,9 @@
             display: flex;
             justify-content: right;
             align-items:end;
+            position: absolute;
+            bottom: 6px;
+            right: 6px;
         }
         &__mark{
             font-family: Benzin-Regular;
@@ -77,5 +101,9 @@
             text-align: left;
             color: #ffffff;
         }
+    }
+    a{
+        text-decoration: none;
+        color: white;
     }
 }

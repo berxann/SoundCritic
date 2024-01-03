@@ -1,0 +1,121 @@
+//importPart
+@import "../stuff/fonts";
+@import "../stuff/mixins";
+@import "../stuff/reset";
+@import "../stuff/variables";
+@import "../stuff/fonts";
+
+//importBlocks
+
+// @import "blocks/promo";
+// @import "blocks/best";
+// @import "blocks/reviews";
+// @import "blocks/index/footer";
+//@import "blocks/";
+
+
+
+
+//scssRules
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    width: $containerWidth;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  
+@include header;
+
+@include footer;
+
+
+
+body{
+    background-color: #180F1A;
+    
+}
+hr{
+    margin-top: 50px;
+}
+.top{
+
+    padding-top: 36px;
+    
+    &__title{
+        @include title;
+    }
+    &__wrapper{
+        padding-top: 74px;
+        position: relative;
+    }
+    &-item{
+        padding-top: 19px;
+        padding-left: 14px;
+        padding-bottom: 27px;
+        background-image: url("../../img/images/topcard2.png");
+        width: 667px;
+        height: 200px;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 31px;
+        position: relative;
+        &__albom{
+            width: 150px;
+            height: 150px;
+        }
+        &__treble{
+            width: 52px;
+            height: 58px;
+            position: absolute;
+            bottom: 20px;
+            right: 80px;
+        }
+        &__text{
+            margin-left: 17px;
+        }
+        &__name{
+            font-family: Benzin-Semibold, sans-serif;
+            font-size: 23px;
+            color: white;
+        }
+        &__author{
+            margin-top: 4px;
+            font-family: Benzin-Semibold, sans-serif;
+            font-size: 16px;
+            color: white;
+        }
+        &__link{
+            position: absolute;
+            bottom: 27px;
+            font-family: Benzin-Regular, sans-serif;
+            font-size: 18px;
+            color: white;
+        }
+        &__mark{
+            font-family: Benzin-Regular, sans-serif;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            transform: translateY(45%);
+        }
+        .circle{
+            width: 64px;
+            height: 64px;
+            border-radius: 100px;
+            background-color: #A044FF; /* Цвет кругового фона */
+            z-index: 1; /* Поместите круг под текст */
+            position: absolute;
+            right: 26px;
+            bottom: 17px;
+        }
+    }
+
+}

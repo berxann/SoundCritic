@@ -13,6 +13,11 @@
   src: local("Benzin-Regular"), local("Benzin-Regular"), url("Benzin-Regular.ttf") format("truetype");
   font-weight: 400;
 }
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: local("Ubuntu-Regular"), local("Ubuntu-Regular"), url("Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,6 +42,11 @@
 @font-face {
   font-family: "Benzin-Regular";
   src: local("Benzin-Regular"), local("Benzin-Regular"), url("Benzin-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: local("Ubuntu-Regular"), local("Ubuntu-Regular"), url("Ubuntu-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 .promo {
@@ -153,8 +163,7 @@
 }
 .subheader h1 span {
   background-image: linear-gradient(to right, #ff00cc, #a044ff);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -174,8 +183,7 @@
 }
 .best .title span {
   background-image: linear-gradient(to right, #ff00cc, #a044ff);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 .best__wrapper {
@@ -188,6 +196,7 @@
   margin-top: 84px;
 }
 .best-item {
+  box-shadow: 7px 3px 10px rgba(98, 63, 105, 0.58);
   position: relative;
   box-sizing: border-box;
   padding-top: 10px;
@@ -283,8 +292,7 @@
 }
 .title span {
   background-image: linear-gradient(to right, #ff00cc, #a044ff);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -461,4 +469,6 @@
   margin: 0 auto;
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */

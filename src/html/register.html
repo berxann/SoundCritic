@@ -7,27 +7,25 @@
     <title>Регистрация</title>
 </head>
 <body>
-    <section class="register">
-        <div class="container">
-            @@include("../parts/header.html")
-            <div class="register__wrapper">
-                <div class="register__title">Зарегистрируйтесь</div>
-                <form action="#" class="feed-form">
-                    <input name="email" required type="email", placeholder="Введите e-mail">
-                    <input name="password" required type="password", placeholder="Введите пароль">
-                    <input name="second_password" required type="password", placeholder="Подтвердите пароль">
-                </form>
-                <button class="btn">Войти</button>
-                <div class="register__text">
-                    <div class="register__descr">Нет аккаунта?</div>
-                    <a href="#" class="register__link">Зарегистрироваться</a>
-                </div>
+<section class="register">
+    <div class="container">
+        @@include("../parts/header.html")
+        <div class="register__wrapper">
+            <div class="register__title">Зарегистрируйтесь</div>
+            <form action="#" class="feed-form">
+                <input name="email" required type="email", placeholder="Введите e-mail">
+                <input name="password" required type="password", placeholder="Введите пароль">
+                <input name="second_password" required type="password", placeholder="Подтвердите пароль">
+            </form>
+            <button class="btn">Войти</button>
+            <div class="register__text">
+                <div class="register__descr">Уже зарегистрированы?</div>
+                <a href="../html/login.html" class="register__link">Войти</a>
             </div>
-    
         </div>
-        <hr>
-        @@include("../parts/footer.html")
-        </section>
-        
+    </div>
+<hr>
+    @@include("../parts/footer.html")
+    </section>
 </body>
 </html>

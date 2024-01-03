@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Benzin-Semibold";
   src: local("Benzin-Semibold"), local("Benzin-Semibold"), url("Benzin-Semibold.ttf") format("truetype");
@@ -49,32 +50,43 @@
   src: local("Ubuntu-Regular"), local("Ubuntu-Regular"), url("Ubuntu-Regular.ttf") format("truetype");
   font-weight: 400;
 }
-.promo {
-  padding-top: 36px;
-  background: #180f1a;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.promo .header {
+
+.container {
+  width: 1432px;
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.header {
   background: #180f1a;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 89px;
 }
-.promo .header__logo > img {
+.header__logo > img {
   height: 89px;
   width: 190px;
 }
-.promo .header__list {
+.header__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
 }
-.promo .header__list :last-child {
+.header__list :last-child {
   margin-right: 0;
   margin-left: 20px;
 }
-.promo .header__list :last-child ::before {
+.header__list :last-child ::before {
   content: "";
   background-image: url("../../img/icons/user.png");
   width: 28px;
@@ -87,7 +99,7 @@
   margin-right: 4px;
   margin-bottom: -2px;
 }
-.promo .header__list a {
+.header__list a {
   font-family: Benzin-Regular, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -97,22 +109,22 @@
   text-transform: none;
   margin-left: 0;
 }
-.promo .header__list a:last-child {
+.header__list a:last-child {
   display: flex;
   align-items: center;
   margin-left: 0;
 }
-.promo .header__list a:last-child img {
+.header__list a:last-child img {
   width: 28px;
   height: 28px;
 }
-.promo .header__list li {
+.header__list li {
   margin-right: 41px;
   position: relative;
   padding-bottom: 5px;
   margin-left: 0;
 }
-.promo .header__list li ::after {
+.header__list li ::after {
   content: "";
   position: absolute;
   left: 0;
@@ -123,7 +135,7 @@
   background-image: linear-gradient(to right, #ff00cc, #a044ff);
   background-size: 0 100%;
 }
-.promo .header__list li :hover::after {
+.header__list li :hover::after {
   content: "";
   position: absolute;
   left: 0;
@@ -143,40 +155,22 @@
   }
 }
 
-.subheader {
-  font-family: Benzin-Semibold, sans-serif;
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 58px;
-  text-align: center;
-  color: #ffffff;
-  margin-top: 93px;
-}
-.subheader span {
-  background-image: linear-gradient(to right, #ff00cc, #a044ff);
-  background-clip: text;
-  color: transparent;
-}
-
-.footer {
-  background: #180f1a;
-}
-.footer .footerwrapper {
+.footerwrapper {
   height: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.footer .footerlogo {
+.footerlogo {
   width: 190px;
   height: 89px;
 }
-.footer .footercontent {
+.footercontent {
   width: 250px;
   display: flex;
   justify-content: space-between;
 }
-.footer .footerdescr {
+.footerdescr {
   display: inline;
   font-family: Benzin-Regular;
   font-size: 12px;
@@ -186,16 +180,16 @@
   text-align: left;
   color: white;
 }
-.footer .footerelement {
+.footerelement {
   display: flex;
   align-items: center;
   justify-self: center;
   text-decoration: none;
 }
-.footer .footerelement a {
+.footerelement a {
   text-decoration: none;
 }
-.footer .footertext {
+.footertext {
   font-family: Benzin-Regular, sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -206,125 +200,118 @@
   text-decoration: none;
 }
 
-.reviews {
-  background: #180f1a;
-  padding-top: 122px;
-  padding-bottom: 102px;
+body {
+  background-color: #180F1A;
 }
 
-.reviews-item {
-  width: 1028px;
-  height: 455px;
-  border: 1px solid rgba(255, 255, 255, 0.1019607843);
-  border-radius: 14px;
-  margin: 0 auto;
-  margin-bottom: 50px;
+.register {
+  padding-top: 36px;
 }
-.reviews-item__header {
-  display: flex;
-  justify-content: space-between;
-  width: 984px;
-  height: 102px;
-  margin: 0 auto;
-  margin-top: 9px;
-  background-image: url("../../../img/images/headerBest.png");
-}
-.reviews-item__user {
-  padding: 9px 0 16px 19px;
-  display: flex;
-  align-items: center;
-}
-.reviews-item__userimage > img {
-  width: 73px;
-  height: 73px;
-  margin-right: 14px;
-  border-radius: 6px;
-}
-.reviews-item__username {
-  font-family: Benzin-Semibold, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 28px;
-  color: #FFFFFF;
-}
-.reviews-item__song {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 380px;
-}
-.reviews-item__rate {
+.register__wrapper {
+  background-image: url("../../img/images/login.png");
+  width: 510px;
+  height: 585px;
   position: relative;
+  padding-top: 60px;
   display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 51px;
+  margin-bottom: 73px;
   align-items: center;
-  font-family: Benzin-Bold, sans-serif;
-  font-size: 15px;
+}
+.register__title {
+  text-align: center;
+  font-family: Benzin-Semibold;
+  font-size: 25px;
   font-weight: 400;
-  line-height: 21px;
-  color: #FFFFFF;
-  padding-bottom: 5px;
-}
-.reviews-item__rate::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  display: block;
-  background-image: linear-gradient(to right, #ff00cc, #a044ff);
-  background-size: 100%;
-}
-.reviews-item__rate img {
-  width: 28px;
-  height: 28px;
-}
-.reviews-item__image > img {
-  width: 73px;
-  height: 73px;
-  margin-right: 9px;
-}
-.reviews-item__song-name {
-  font-family: Benzin-Semibold, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
   line-height: 28px;
-  color: #FFFFFF;
+  letter-spacing: 0em;
+  color: white;
+  position: relative;
 }
-.reviews-item__song-author {
-  font-family: Benzin-Regular, sans-serif;
-  font-size: 10px;
+.register__title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px; /* Выберите желаемую толщину полоски */
+  background-image: linear-gradient(to right, #ff00cc, #a044ff); /* Замените это значение цветом вашей полоски */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+.register input {
+  width: 243px;
+  height: 50px;
+  font-family: Ubuntu-Regular, sans-serif;
+  font-size: 16px;
   font-weight: 400;
   line-height: 14px;
-  color: #FFFFFF;
+  letter-spacing: 0em;
+  text-align: left;
+  border-radius: 15px;
+  border: 2px solid;
+  border-color: #D9D9D9;
+  background-color: #404040;
+  padding-left: 10px;
+  margin-top: 14px;
+  color: white;
 }
-.reviews-item__text {
-  width: 980px;
-  height: 303px;
-  margin: 0 auto;
-  margin-top: 20px;
-  background-image: url("../../../img/images/Rectangle 161.png");
+.register input::placeholder {
+  color: #E1E1E1;
+}
+.register form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 95px;
+  margin-bottom: 75px;
+}
+.register__img {
+  width: 243px;
+  height: 118px;
+  margin-top: 30px;
+}
+.register .btn {
+  width: 170px;
+  height: 45px;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #ff00cc, #a044ff);
   font-family: Benzin-Regular;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+  border: none;
+  margin-top: 29px;
+  transition: 0.5s all;
+}
+.register .btn:hover {
+  transform: scale(1.05);
+}
+.register__text {
+  display: flex;
+  margin-top: 10px;
+}
+.register__text a {
+  font-family: Benzin-Regular;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
   color: #FFFFFF;
-  padding: 17px 22px 7px 16px;
+  margin-left: 4px;
+}
+.register__descr {
+  font-family: Benzin-Regular;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #CECECE;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  width: 1432px;
-  padding-right: 0;
-  padding-left: 0;
-  margin: 0 auto;
-  box-sizing: border-box;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-/*# sourceMappingURL=reviews.css.map */
+/*# sourceMappingURL=register.css.map */

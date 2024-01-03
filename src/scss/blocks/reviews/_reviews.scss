@@ -1,0 +1,107 @@
+.reviews{
+  background: $bgColor;
+  padding-top: 122px;
+  padding-bottom: 102px;
+}
+.reviews-item{
+  width: 1028px;
+  height: 455px;
+  border: 1px solid #FFFFFF1A;
+  border-radius: 14px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    width: 984px;
+    height: 102px;
+    margin: 0 auto;
+    margin-top: 9px;
+    background-image: url('../../../img/images/headerBest.png');
+  }
+  &__user{
+    padding: 9px 0 16px 19px;
+    display: flex;
+    align-items: center;
+  }
+  &__userimage > img{
+    width: 73px;
+    height: 73px;
+    margin-right: 14px;
+    border-radius: 6px;
+  }
+  &__username {
+    font-family: Benzin-Semibold, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #FFFFFF;
+  }
+  &__song{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 380px;
+  }
+  &__rate{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: Benzin-Bold, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding-bottom: 5px;
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      display: block;
+      background-image: $gradient;
+      background-size: 100%;
+    }
+    img{
+      width: 28px;
+      height: 28px;
+    }
+  }
+  &__image > img{
+    width: 73px;
+    height: 73px;
+    margin-right: 9px;
+  }
+  &__song-name{
+    font-family: Benzin-Semibold, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #FFFFFF;
+
+  }
+  &__song-author{
+    font-family: Benzin-Regular, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #FFFFFF;
+  }
+  &__text{
+    width: 980px;
+    height: 303px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    background-image: url('../../../img/images/Rectangle 161.png');
+    font-family: Benzin-Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 17px 22px 7px 16px;
+  }
+
+}

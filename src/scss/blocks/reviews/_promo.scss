@@ -1,15 +1,13 @@
 .promo{
+  padding-top: 36px;
   @include header;
   background: #180f1a;
 }
-.subheader{
-    text-align: center;
-  font-family: Benzin-Semibold, sans-serif;
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 66px;
-  color: #FFFFFF;
-  span{
-
-  }
+.subheader {
+  @include title;
+  margin-top: 93px;
+}
+.footer{
+  background: #180f1a;
+  @include footer;
 }

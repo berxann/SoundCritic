@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "Benzin-Semibold";
+  src: local("Benzin-Semibold"), local("Benzin-Semibold"), url("Benzin-Semibold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Benzin-Bold";
+  src: local("Benzin-Bold"), local("Benzin-Bold"), url("Benzin-Bold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Benzin-Regular";
+  src: local("Benzin-Regular"), local("Benzin-Regular"), url("Benzin-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: local("Ubuntu-Regular"), local("Ubuntu-Regular"), url("Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:after, *:before {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Benzin-Semibold";
+  src: local("Benzin-Semibold"), local("Benzin-Semibold"), url("Benzin-Semibold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Benzin-Bold";
+  src: local("Benzin-Bold"), local("Benzin-Bold"), url("Benzin-Bold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Benzin-Regular";
+  src: local("Benzin-Regular"), local("Benzin-Regular"), url("Benzin-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: local("Ubuntu-Regular"), local("Ubuntu-Regular"), url("Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+.promo {
+  background: #180f1a;
+}
+.promo .header {
+  background: #180f1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 89px;
+}
+.promo .header__logo > img {
+  height: 89px;
+  width: 190px;
+}
+.promo .header__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.promo .header__list :last-child {
+  margin-right: 0;
+  margin-left: 20px;
+}
+.promo .header__list :last-child ::before {
+  content: "";
+  background-image: url("../../img/icons/user.png");
+  width: 28px;
+  height: 28px;
+  background-size: 28px 28px;
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  display: block;
+  margin-right: 4px;
+  margin-bottom: -2px;
+}
+.promo .header__list a {
+  font-family: Benzin-Regular, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: none;
+  margin-left: 0;
+}
+.promo .header__list a:last-child {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+.promo .header__list a:last-child img {
+  width: 28px;
+  height: 28px;
+}
+.promo .header__list li {
+  margin-right: 41px;
+  position: relative;
+  padding-bottom: 5px;
+  margin-left: 0;
+}
+.promo .header__list li ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-image: linear-gradient(to right, #ff00cc, #a044ff);
+  background-size: 0 100%;
+}
+.promo .header__list li :hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  display: block;
+  animation: gradientAnimation 0.6s forwards;
+}
+@keyframes gradientAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    background-size: 100% 100%;
+    width: 100%;
+  }
+}
+
+.subheader {
+  text-align: center;
+  font-family: Benzin-Semibold, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 66px;
+  color: #FFFFFF;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1432px;
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/*# sourceMappingURL=reviews.css.map */

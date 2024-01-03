@@ -9,7 +9,7 @@ const clean = require('gulp-clean')
 const server = require('gulp-server-livereload')
 
 gulp.task('html', function() {
-    return src('src/html/**.html','node_modules/bootstrap/dist/js/bootstrap.bundle.js', {allowEmpty: true})
+    return src('src/html/**.html', 'src/parts/**.html', {allowEmpty: true})
         .pipe((htmlmin)({
             collapseWhitespace: true
         }))

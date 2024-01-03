@@ -255,7 +255,7 @@
 .best-item__wrapper {
   display: flex;
   justify-content: right;
-  align-items: end;
+  align-items: flex-end;
   position: absolute;
   bottom: 6px;
   right: 6px;

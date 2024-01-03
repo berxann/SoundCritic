@@ -1,9 +1,9 @@
 //importPart
-@import "stuff/fonts";
-@import "stuff/mixins";
-@import "stuff/reset";
-@import "stuff/variables";
-@import "stuff/fonts";
+@import "../stuff/fonts";
+@import "../stuff/mixins";
+@import "../stuff/reset";
+@import "../stuff/variables";
+@import "../stuff/fonts";
 
 //importBlocks
 
@@ -41,7 +41,7 @@ body{
 .login{
   padding-top: 36px;
   &__wrapper{
-    background-image: url("../img/images/login.png"); 
+    background-image: url("../../img/images/login.png");
     width: 510px;
     height: 585px;
     position: relative;

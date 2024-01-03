@@ -1,16 +1,16 @@
 //importPart
-@import "stuff/fonts";
-@import "stuff/mixins";
-@import "stuff/reset";
-@import "stuff/variables";
-@import "stuff/fonts";
+@import "../stuff/fonts";
+@import "../stuff/mixins";
+@import "../stuff/reset";
+@import "../stuff/variables";
+@import "../stuff/fonts";
 
 //importBlocks
 
-@import "blocks/index/promo";
-@import "blocks/index/best";
-@import "blocks/index/reviews";
-@import "blocks/index/footer";
+@import "../blocks/index/promo";
+@import "../blocks/index/best";
+@import "../blocks/index/reviews";
+@import "../blocks/index/footer";
 //@import "blocks/";
 
 //scssRules

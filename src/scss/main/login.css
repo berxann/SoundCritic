@@ -204,6 +204,9 @@ body {
   background-color: #180F1A;
 }
 
+.login {
+  padding-top: 36px;
+}
 .login__wrapper {
   background-image: url("../../img/images/login.png");
   width: 510px;
@@ -214,7 +217,7 @@ body {
   flex-direction: column;
   margin: 0 auto;
   margin-top: 51px;
-  margin-bottom: 51px;
+  margin-bottom: 73px;
   align-items: center;
 }
 .login__title {
@@ -241,7 +244,7 @@ body {
   width: 243px;
   height: 50px;
   font-family: Ubuntu-Regular, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 14px;
   letter-spacing: 0em;
@@ -252,6 +255,7 @@ body {
   background-color: #404040;
   padding-left: 10px;
   margin-top: 14px;
+  color: white;
 }
 .login input::placeholder {
   color: #E1E1E1;
@@ -280,10 +284,14 @@ body {
   color: white;
   border: none;
   margin-top: 29px;
+  transition: 0.5s all;
+}
+.login .btn:hover {
+  transform: scale(1.05);
 }
 .login__text {
   display: flex;
-  margin-top: 7px;
+  margin-top: 10px;
 }
 .login__text a {
   font-family: Benzin-Regular;

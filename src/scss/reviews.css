@@ -1,0 +1,329 @@
+@font-face {
+  font-family: "Benzin-Semibold";
+  src: local("Benzin-Semibold"), local("Benzin-Semibold"), url("Benzin-Semibold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Benzin-Bold";
+  src: local("Benzin-Bold"), local("Benzin-Bold"), url("Benzin-Bold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Benzin-Regular";
+  src: local("Benzin-Regular"), local("Benzin-Regular"), url("Benzin-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: local("Ubuntu-Regular"), local("Ubuntu-Regular"), url("Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:after, *:before {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Benzin-Semibold";
+  src: local("Benzin-Semibold"), local("Benzin-Semibold"), url("Benzin-Semibold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Benzin-Bold";
+  src: local("Benzin-Bold"), local("Benzin-Bold"), url("Benzin-Bold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Benzin-Regular";
+  src: local("Benzin-Regular"), local("Benzin-Regular"), url("Benzin-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: local("Ubuntu-Regular"), local("Ubuntu-Regular"), url("Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+.promo {
+  padding-top: 36px;
+  background: #180f1a;
+}
+.promo .header {
+  background: #180f1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 89px;
+}
+.promo .header__logo > img {
+  height: 89px;
+  width: 190px;
+}
+.promo .header__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.promo .header__list :last-child {
+  margin-right: 0;
+  margin-left: 20px;
+}
+.promo .header__list :last-child ::before {
+  content: "";
+  background-image: url("../../img/icons/user.png");
+  width: 28px;
+  height: 28px;
+  background-size: 28px 28px;
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  display: block;
+  margin-right: 4px;
+  margin-bottom: -2px;
+}
+.promo .header__list a {
+  font-family: Benzin-Regular, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: none;
+  margin-left: 0;
+}
+.promo .header__list a:last-child {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+.promo .header__list a:last-child img {
+  width: 28px;
+  height: 28px;
+}
+.promo .header__list li {
+  margin-right: 41px;
+  position: relative;
+  padding-bottom: 5px;
+  margin-left: 0;
+}
+.promo .header__list li ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-image: linear-gradient(to right, #ff00cc, #a044ff);
+  background-size: 0 100%;
+}
+.promo .header__list li :hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  display: block;
+  animation: gradientAnimation 0.6s forwards;
+}
+@keyframes gradientAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    background-size: 100% 100%;
+    width: 100%;
+  }
+}
+
+.subheader {
+  font-family: Benzin-Semibold, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 93px;
+}
+.subheader span {
+  background-image: linear-gradient(to right, #ff00cc, #a044ff);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.footer {
+  background: #180f1a;
+}
+.footer .footerwrapper {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footerlogo {
+  width: 190px;
+  height: 89px;
+}
+.footer .footercontent {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footerdescr {
+  display: inline;
+  font-family: Benzin-Regular;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+.footer .footerelement {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  text-decoration: none;
+}
+.footer .footerelement a {
+  text-decoration: none;
+}
+.footer .footertext {
+  font-family: Benzin-Regular, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+}
+
+.reviews {
+  background: #180f1a;
+  padding-top: 122px;
+  padding-bottom: 102px;
+}
+
+.reviews-item {
+  width: 1028px;
+  height: 455px;
+  border: 1px solid rgba(255, 255, 255, 0.1019607843);
+  border-radius: 14px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.reviews-item__header {
+  display: flex;
+  justify-content: space-between;
+  width: 984px;
+  height: 102px;
+  margin: 0 auto;
+  margin-top: 9px;
+  background-image: url("../../../img/images/headerBest.png");
+}
+.reviews-item__user {
+  padding: 9px 0 16px 19px;
+  display: flex;
+  align-items: center;
+}
+.reviews-item__userimage > img {
+  width: 73px;
+  height: 73px;
+  margin-right: 14px;
+  border-radius: 6px;
+}
+.reviews-item__username {
+  font-family: Benzin-Semibold, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+.reviews-item__song {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 380px;
+}
+.reviews-item__rate {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: Benzin-Bold, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFFFFF;
+  padding-bottom: 5px;
+}
+.reviews-item__rate::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-image: linear-gradient(to right, #ff00cc, #a044ff);
+  background-size: 100%;
+}
+.reviews-item__rate img {
+  width: 28px;
+  height: 28px;
+}
+.reviews-item__image > img {
+  width: 73px;
+  height: 73px;
+  margin-right: 9px;
+}
+.reviews-item__song-name {
+  font-family: Benzin-Semibold, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+.reviews-item__song-author {
+  font-family: Benzin-Regular, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #FFFFFF;
+}
+.reviews-item__text {
+  width: 980px;
+  height: 303px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-image: url("../../../img/images/Rectangle 161.png");
+  font-family: Benzin-Regular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFFFFF;
+  padding: 17px 22px 7px 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1432px;
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}/*# sourceMappingURL=reviews.css.map */

@@ -1,0 +1,89 @@
+.score{
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__colors{
+        width: 40%;
+        height: 450px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center 
+    }
+    &__title{
+        @include title;
+        font-family: Benzin-Regular, sans-serif;
+        font-size: 50px;
+        
+    }
+    &__global{
+        width: 60%;
+        padding-top: 46px;
+    }
+    .circle{
+        width: 180px;
+        height: 180px;
+        border-radius: 100px;
+        background-color: #A044FF; /* Цвет кругового фона */
+        z-index: 1; /* Поместите круг под текст */
+        position: relative;
+        &_noob{
+            background-color: #50267B;
+        }
+        &_pro{
+            background-color: #A044FF;
+        }
+        &_medium{
+            background-color: #6D32AA;
+        }
+        &_big{
+            width: 231px;
+            height: 231px;
+            margin: 30px 60px;
+            border-radius: 100%;
+        }
+    }
+    &__scale{
+        font-family: Benzin-Regular;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 48px;
+        letter-spacing: 0em; 
+        color: white;
+        text-align: center;
+        transform: translateY(135%);  
+        &_big{
+            transform: translateY(190%); 
+            font-size: 64px;
+        }
+    }
+    &__mark{
+        display: flex;
+        justify-content: center;
+
+        .circle:first-child{
+            position: relative;
+            &::before{
+                content: "";
+                background-image: url("../../../img/images/treble.png");
+                background-size: 200px 200px;
+                height: 200px;
+                width: 200px;
+                left: -148px;
+                top: 0;
+                position: absolute;
+            }
+            &::after{
+                content: "/";
+                height: 200px;
+                width: 200px;
+                font-family: Benzin-Regular;
+                font-size: 220px;
+                left: 236px;
+                top: -50px;
+                position: absolute;
+                color: white;
+            }
+        }
+    }
+}

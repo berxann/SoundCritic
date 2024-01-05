@@ -1,0 +1,149 @@
+//importPart
+@import "../stuff/fonts";
+@import "../stuff/mixins";
+@import "../stuff/reset";
+@import "../stuff/variables";
+@import "../stuff/fonts";
+
+//importBlocks
+
+@import "../blocks/add/stats";
+@import "../blocks/add/score";
+// @import "blocks/reviews";
+// @import "blocks/index/footer";
+//@import "blocks/";
+
+//scssRules
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    width: $containerWidth;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+body{
+    background-color: $bgColor;
+    padding-top: 36px;
+}
+  
+@include header;
+
+@include footer;
+
+
+#selectedFile{
+    background-color: rgba(#FFFFFF, 0.2);
+    height: 257px;
+    width: 257px;
+    border: 2px solid;
+    border-color: rgba($color: #D9D9D9, $alpha: 0.5);
+    border-radius: 16px;
+    margin-right: 64px;
+}
+
+.custom-file {
+	position: relative;
+	display: inline-block;
+}
+.custom-file span {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 20px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	border-radius: 15px;
+	background-color: #A044FF;
+	line-height: 22px;
+	height: 40px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+    font-family: Benzin-Semibold, san;
+    width: 234px;
+    height: 105px;
+    text-align: center;
+    padding-top: 30px;
+}
+.custom-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.title{
+    @include title;
+    margin-top: 36px;
+    font-size: 36px;
+}
+.song{
+    margin-top: 56px;
+    &__wrapper{
+        padding-top:1px ;
+        background-image: url("../../img/images/addcard.png");
+        width: 1436px;
+        height: 367px;
+        padding-left: 45px;
+        padding-right: 51px;
+        padding-top: 54px;
+        padding-bottom: 54px;
+        position: relative;
+    }
+    form{
+        display: flex;
+
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 71px;
+    }
+    &__input{
+        width: 710px;
+        height: 84px;
+        background-color: rgba(#FFFFFF, 0.2);
+        border: 1px solid;
+        border-color: rgba($color: #D9D9D9, $alpha: 0.5);
+        border-radius: 16px;
+        padding-left: 26px;
+        font-family: Benzin-Regular, sans-serif;
+        font-size: 24px;
+        color: white;
+        &::placeholder{
+            color: rgba($color: #FFFFFF, $alpha: 0.5);
+        }
+    
+    }
+
+
+}
+.btn-save{
+    width: 235px;
+    height: 105px;
+    font-family: Benzin-Semibold;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33px;
+    background-image: $gradient;
+    color: white;
+    border: none;
+	border-radius: 15px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 65px;
+    right: 53px;
+}

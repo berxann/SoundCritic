@@ -1,0 +1,103 @@
+.stats{
+    &__wrapper{
+        background-image: url("../../../img/images/statscard.png");
+        width: 1432px;
+        height: 634px;
+        margin-top: 56px;
+        position: relative;
+        padding-top: 31px;
+        padding-left: 57px;
+        padding-right: 57px;
+    }
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    } 
+    &-card{
+        width: 630px;
+        border: 2px solid;
+        border-radius: 10px;
+        border-color: rgba($color: #D9D9D9, $alpha: .5);
+        height: 170px;
+        margin-bottom: 30px;
+        &_big{
+            width: 100%;
+            height: 170px;
+            border: 2px solid;
+            border-radius: 10px;
+            border-color: rgba($color: #D9D9D9, $alpha: .5);
+        }
+        &__title{
+            @include title;
+            margin-bottom: 42px;
+            font-size: 40px;
+        }
+        &-value {
+            display: block;
+            font-family: Benzin-Regular, sans-serif;
+            margin-left: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }
+        &-slider{
+
+            display: block;
+            -webkit-appearance: none;
+            width: 477px;
+            height: 10px;
+            background-image: $gradient;
+            border-radius: 5px;
+            outline: none;
+            margin: 0 auto;
+            position: relative;
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 50px;
+                height: 50px;
+                background:  url('../../../img/images/treble.png') center center no-repeat; /* Замените 'your-image.png' на путь к вашему изображению */
+                background-size: cover;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            &::before{
+                content: "0";
+                font-family: Benzin-Regular;
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 50px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: white; 
+                position: absolute;
+                left: -50px;
+                top: -23px; 
+            }
+            &::after{
+                content: "10";
+                font-family: Benzin-Regular;
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 50px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: white; 
+                position: absolute;
+                right: -65px;
+                top: -23px; 
+            }
+        }
+    }
+
+}
+
+.stats-card-slider::-moz-range-progress  {
+    background: #00ff00; /* Цвет слева от ползунка */
+}
+  
+.stats-card-slider::-ms-fill-upper {
+    background: #0000ff; /* Цвет справа от ползунка */
+}

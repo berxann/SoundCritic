@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main/add.css">
+    <title>Добавить песню</title>
+</head>
+<body>
+    <div class="container">
+        @@include("../parts/header.html")
+        <div class="title">Добавить <span>трек</span></div>
+    </div>
+    <section class="song">
+        <div class="container">
+            <div class="song__wrapper">
+                <form action="#">
+                    <div class="song__text">
+                        <input name="song" required class="song__input" type="text" placeholder="Введите название песни" >
+                        <input name="author" required class="song__input" type="text" placeholder="Введите автора">
+                    </div>
+                    <div id="selectedFile"></div>
+                    <label class="custom-file" for="img">
+                        <input name="file" required accept="image/png, image/jpeg" type="file" id="img" class="custom-file-input">
+                        <span>Выбрать <br> изображение</span>
+                    </label>
+                    <button class="btn-save">Сохранить</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <section class="stats">
+        <div class="container">
+            <div class="stats__wrapper">
+                <div class="stats__wrap">
+                  <div class="stats-card">
+                    <div class="stats-card__title">Звучание</div>
+                    <form action="#">
+                      <input type="range" name="sounds" class="stats-card-slider" min="0" max="10" value="5" step="1">
+                      <span class="stats-card-value" id="sliderValue1">5</span>
+                    </form>
+                  </div>
+                  <div class="stats-card">
+                    <div class="stats-card__title">Текст</div>
+                    <form action="#">
+                      <input type="range" name="text" class="stats-card-slider" min="0" max="10" value="5" step="1">
+                      <span class="stats-card-value" id="sliderValue2">5</span>
+                    </form>
+                  </div>
+                  <div class="stats-card">
+                    <div class="stats-card__title">Атмосфера</div>
+                    <form action="#">
+                      <input type="range" name="atmosphere" class="stats-card-slider" min="0" max="10" value="5" step="1">
+                      <span class="stats-card-value" id="sliderValue3">5</span>
+                    </form>
+                  </div>
+                  <div class="stats-card">
+                    <div class="stats-card__title">Оригинальность</div>
+                    <form action="#">
+                      <input type="range" name="originality" class="stats-card-slider" min="0" max="10" value="5" step="1">
+                      <span class="stats-card-value" id="sliderValue4">5</span>
+                    </form>
+                  </div>
+                </div>
+                <div class="stats-card stats-card_big">
+                  <div class="stats-card__title">Общее впечатление</div>
+                  <form action="#">
+                    <input type="range" name="rating" class="stats-card-slider" min="0" max="10" value="5" step="1">
+                    <span class="stats-card-value" id="sliderValue5">5</span>
+                  </form>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <section class="score">
+        <div class="container">
+            <div class="score__wrapper">
+                <div class="score__colors">
+                    <div class="circle circle_noob" id="circleNoob">
+                        <div class="score__scale">0-20</div>
+                    </div>
+                    <div class="circle circle_medium" id="circleMedium">
+                        <div class="score__scale">21-40</div>
+                    </div>
+                    <div class="circle circle_pro" id="circlePro">
+                        <div class="score__scale">41-60</div>
+                    </div>
+                </div>
+                <div class="score__global">
+                    <div class="score__title">Общая <span>оценка</span></div>
+                    <div class="score__mark">
+                        <div class="circle circle_medium circle_big" id="total">
+                            <div class="score__scale score__scale_big">30</div>
+                        </div>
+                        <div class="circle circle_pro circle_big">
+                            <div class="score__scale score__scale_big">60</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <div class="container">
+        @@include("../parts/footer.html")
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+    </script>
+    <script>
+    var selDiv = "";
+    var storedFiles = [];
+    $(document).ready(function () {
+      $("#img").on("change", handleFileSelect);
+      selDiv = $("#selectedFile");
+    });
+
+    function handleFileSelect(e) {
+      var files = e.target.files;
+      var filesArr = Array.prototype.slice.call(files);
+      filesArr.forEach(function (f) {
+        if (!f.type.match("image.*")) {
+          return;
+        }
+        storedFiles.push(f);
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          var html =
+            '<img src="' +
+            e.target.result +
+            "\" data-file='" +
+            f.name +
+            "alt='Category Image' height='254px' width='254px' style='border-radius: 16px;' >";
+          selDiv.html(html);
+        };
+        reader.readAsDataURL(f);
+      });
+    }
+    </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const sliders = document.querySelectorAll('.stats-card-slider');
+  sliders.forEach(function (slider, index) {
+    const sliderValue = document.getElementById('sliderValue' + (index + 1));
+    updateSliderValue(slider, sliderValue);
+
+    slider.addEventListener('input', function () {
+      updateSliderValue(this, sliderValue);
+    });
+  });
+
+  function updateSliderValue(slider, sliderValue) {
+    const value = slider.value;
+    slider.style.setProperty('--fill', (value / slider.max) * 100 + '%');
+    sliderValue.textContent = value;
+  }
+});
+    </script>
+      <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sliders = document.querySelectorAll('.stats-card-slider');
+      const total = document.getElementById('total');
+      const ratingSlider = document.querySelector('input[name="rating"]');
+
+
+      sliders.forEach(function (slider) {
+        slider.addEventListener('input', updateTotalScore);
+      });
+
+      function updateTotalScore() {
+        let totalScoreNoob = 0;
+
+        sliders.forEach(function (slider) {
+          totalScoreNoob += parseInt(slider.value, 10);
+        });
+        totalScoreNoob += parseInt(ratingSlider.value, 10);
+        total.querySelector('.score__scale_big').textContent = totalScoreNoob;
+
+        updateCircleClass(total, totalScoreNoob);
+      }
+
+
+      function updateCircleClass(element, condition) {
+        element.classList.remove('circle_noob', 'circle_medium', 'circle_pro');
+        if (condition <= 20) {
+          element.classList.add('circle_noob');
+        } else if (condition > 20 && condition <= 40){
+            element.classList.add('circle_medium');
+        } else if (condition > 40) {
+            element.classList.add('circle_pro');
+          }
+        }
+      }
+    );
+      </script>
+</body>
+</html>

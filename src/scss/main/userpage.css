@@ -1,0 +1,457 @@
+@font-face {
+  font-family: "Benzin-Semibold";
+  src: local("Benzin-Semibold"), local("Benzin-Semibold"), url("Benzin-Semibold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Benzin-Bold";
+  src: local("Benzin-Bold"), local("Benzin-Bold"), url("Benzin-Bold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Benzin-Regular";
+  src: local("Benzin-Regular"), local("Benzin-Regular"), url("Benzin-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: local("Ubuntu-Regular"), local("Ubuntu-Regular"), url("Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:after, *:before {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Benzin-Semibold";
+  src: local("Benzin-Semibold"), local("Benzin-Semibold"), url("Benzin-Semibold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Benzin-Bold";
+  src: local("Benzin-Bold"), local("Benzin-Bold"), url("Benzin-Bold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Benzin-Regular";
+  src: local("Benzin-Regular"), local("Benzin-Regular"), url("Benzin-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: local("Ubuntu-Regular"), local("Ubuntu-Regular"), url("Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+.user {
+  padding-top: 36px;
+  padding-bottom: 94px;
+}
+.user .header {
+  background: #180f1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 89px;
+}
+.user .header__logo > img {
+  height: 89px;
+  width: 190px;
+}
+.user .header__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.user .header__list :last-child {
+  margin-right: 0;
+  margin-left: 20px;
+}
+.user .header__list :last-child ::before {
+  content: "";
+  background-image: url("../../img/icons/user.png");
+  width: 28px;
+  height: 28px;
+  background-size: 28px 28px;
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  display: block;
+  margin-right: 4px;
+  margin-bottom: -2px;
+}
+.user .header__list a {
+  font-family: Benzin-Regular, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: none;
+  margin-left: 0;
+}
+.user .header__list a:last-child {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+.user .header__list a:last-child img {
+  width: 28px;
+  height: 28px;
+}
+.user .header__list li {
+  margin-right: 41px;
+  position: relative;
+  padding-bottom: 5px;
+  margin-left: 0;
+}
+.user .header__list li ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-image: linear-gradient(to right, #ff00cc, #a044ff);
+  background-size: 0 100%;
+}
+.user .header__list li :hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  display: block;
+  animation: gradientAnimation 0.6s forwards;
+}
+@keyframes gradientAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    background-size: 100% 100%;
+    width: 100%;
+  }
+}
+
+.user {
+  background: #180f1a;
+}
+.user__wrap {
+  margin-top: 88px;
+  display: flex;
+  align-items: center;
+}
+.user__img > img {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+}
+.user__name {
+  font-family: Benzin-Semibold, sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 69px;
+  color: #FFFFFF;
+  margin-left: 49px;
+}
+.user__rating {
+  margin-left: 130px;
+}
+.user__item-review {
+  background-image: url("../../../img/images/usercard.png");
+  font-family: Benzin-Regular, sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 34px 22px;
+  margin-bottom: 22px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33px;
+  color: #FFFFFF;
+  width: 480px;
+  height: 97px;
+}
+.user__item-song {
+  background-image: url("../../../img/images/usercard.png");
+  font-family: Benzin-Regular, sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 34px 22px;
+  margin-bottom: 22px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33px;
+  color: #FFFFFF;
+  width: 480px;
+  height: 97px;
+}
+
+.songs {
+  font-family: Benzin-Semibold, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+  text-align: center;
+  color: #ffffff;
+  background: #180f1a;
+  text-align: left;
+  margin-top: 0;
+}
+.songs span {
+  background-image: linear-gradient(to right, #ff00cc, #a044ff);
+  background-clip: text;
+  color: transparent;
+}
+
+.song-wrap {
+  display: flex;
+  margin-top: 100px;
+}
+
+.song-item {
+  position: relative;
+  background-image: url("../../../img/images/music_card.png");
+  width: 278px;
+  height: 395px;
+  padding: 12px 9px;
+  margin-right: 20px;
+}
+.song-item__img > img {
+  width: 256px;
+  height: 256px;
+  border-radius: 6px;
+}
+.song-item__songname {
+  font-family: Benzin-Semibold, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.song-item__author {
+  font-family: Benzin-Semibold, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.song-item__wrapper {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+}
+.song-item__wrapper > img {
+  width: 26px;
+  height: 26px;
+}
+.song-item__mark {
+  font-family: Benzin-Regular;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.title {
+  font-family: Benzin-Semibold, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 40px;
+  margin-top: 28px;
+}
+.title span {
+  background-image: linear-gradient(to right, #ff00cc, #a044ff);
+  background-clip: text;
+  color: transparent;
+}
+
+.reviews {
+  background-color: #000000;
+  padding-top: 28px;
+  padding-bottom: 90px;
+}
+.reviews__wrapper {
+  width: 742px;
+  margin: 0 auto;
+}
+.reviews__item {
+  width: 742px;
+  height: 330px;
+  background: #272327;
+  border: rgba(255, 255, 255, 0.1019607843) 2px solid;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+.reviews__header {
+  margin: 0 auto;
+  margin-top: 9px;
+  margin-bottom: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../../img/images/headergood.png");
+  width: 706px;
+  height: 95px;
+}
+.reviews__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviews__userimage > img {
+  margin-left: 19px;
+  width: 73px;
+  height: 73px;
+  border-radius: 100%;
+}
+.reviews__username {
+  color: #FFFFFF;
+  font-family: Benzin-Semibold, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-left: 12px;
+}
+.reviews__song {
+  display: flex;
+  width: 320px;
+  margin-right: 10px;
+}
+.reviews__image > img {
+  width: 73px;
+  height: 73px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.reviews__rate {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: Benzin-Bold;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFFFFF;
+  padding-bottom: 5px;
+}
+.reviews__rate::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-image: linear-gradient(to right, #ff00cc, #a044ff);
+  background-size: 100%;
+}
+.reviews__rate img {
+  width: 28px;
+  height: 28px;
+}
+.reviews__song-name {
+  font-family: Benzin-Semibold, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+.reviews__song-author {
+  font-family: Benzin-Regular, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #FFFFFF;
+}
+.reviews__text {
+  background-image: url("../../img/images/textcard.png");
+  width: 702px;
+  height: 166px;
+  font-family: Benzin-Regular, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #FFFFFF;
+  margin: 0 auto;
+  padding: 5px 19px 4px 18px;
+  margin-bottom: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1432px;
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.footerwrapper {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerlogo {
+  width: 190px;
+  height: 89px;
+}
+.footercontent {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+.footerdescr {
+  display: inline;
+  font-family: Benzin-Regular;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+.footerelement {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  text-decoration: none;
+}
+.footerelement a {
+  text-decoration: none;
+}
+.footertext {
+  font-family: Benzin-Regular, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+}
+
+.footer {
+  background: #180f1a;
+}
+
+/*# sourceMappingURL=userpage.css.map */

@@ -134,7 +134,7 @@
     }
     &descr{
       display: inline;
-      font-family: Benzin-Regular;
+      font-family: Benzin-Regular, sans-serif;
       font-size: 12px;
       font-weight: 400;
       line-height: 17px;
@@ -146,6 +146,7 @@
       display: flex;
       align-items: center;
       justify-self: center;
+      text-align: center;
       text-decoration: none;
       a{
         text-decoration: none;

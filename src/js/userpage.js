@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('.song-wrap').slick({
-        slidesToShow: 3,
+        slidesToShow: 1,
         infinite: false,
         arrows: false,
     });

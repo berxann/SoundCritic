@@ -5,13 +5,14 @@
   margin-top: 0;
 }
 .song-wrap{
+  margin-top: 67px;
   display: flex;
-  margin-top: 100px;
+
 }
 .song-item {
   position: relative;
   background-image: url('../../../img/images/music_card.png');
-  width: 278px;
+  max-width: 278px;
   height: 395px;
   padding: 12px 9px;
   margin-right: 20px;

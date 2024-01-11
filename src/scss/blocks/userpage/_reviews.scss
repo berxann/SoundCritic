@@ -1,15 +1,18 @@
 .title{
   @include title;
-  margin-bottom: 40px;
-  margin-top: 28px;
+  text-align: left;
 }
 .reviews{
-  background-color: #000000;
-  padding-top: 28px;
+  background-color: $bgColor;
+  padding-top: 67px;
   padding-bottom: 90px;
   &__wrapper{
     width: 742px;
+
+    margin-bottom: 67px;
     margin: 0 auto;
+    margin-top: 67px;
+
   }
   &__item{
     width: 742px;
